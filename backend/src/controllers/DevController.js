@@ -20,7 +20,6 @@ module.exports = {
                 type: 'Point',
                 coordinates: [longitude,latitude]
             };
-            console.log(name,avatar_url,bio,techsArray);
             dev = await Dev.create({
                 avatar_url,
                 github_username,
