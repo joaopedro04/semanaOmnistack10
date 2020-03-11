@@ -1,19 +1,19 @@
 import React from 'react';
 import './DevItem.css';
 function DevItem({dev}) {
-    const techs = dev.techs.join(', ');
+    const {avatar_url, name, techs, bio, github_username} = dev;
     return (
         <li className="dev-item">
             <header>
-                <img src={dev.avatar_url} alt={dev.name} />
+                <img src={avatar_url} alt={name} />
                 <div className="user-info">
-                    <strong>{dev.name}</strong>
-                    <span>{techs}</span>
+                    <strong>{name}</strong>
+                    <span>{techs.join(', ')}</span>
                 </div>
             </header>
-            <p>{dev.bio}</p>
+            <p>{bio}</p>
             <a
-                href={`https://github.com/${dev.github_username}`}
+                href={`https://github.com/${github_username}`}
                 target="_blank"
                 rel="noopener noreferrer">
                 Acessar perfil no Github
