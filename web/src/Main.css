@@ -12,5 +12,6 @@ main ul {
 @media (max-width: 650px) {
     main ul {
       grid-template-columns: 1fr;
+      flex: 1
     }
 }
